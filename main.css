@@ -57,14 +57,17 @@ body {
    
 }
 
-h3{
+h1{
     color: var(--trueNeutral);
     padding-bottom: 0.8rem;
     padding-top: 1rem;
     font-weight: 500;
     font-size: 1.4rem;
 }
+h1:hover{
+    color: hsl(178, 100%, 50%);
 
+}
 p {
     color: var(--primaryBlue);
     padding-bottom: 1rem;
@@ -94,6 +97,7 @@ footer{
     align-items: center;
     margin-bottom: 0.6rem;
     gap: 5px;
+    color: var(--primaryBlue);
 }
 
 .price-days-container{
@@ -130,5 +134,46 @@ footer{
 }
 
 .creator-subtitle{
-    color: var(--primaryBlue);
+    color: white;
 }
+
+.creator-subtitle:hover{
+    color: hsl(178, 100%, 50%);
+}
+
+.hover-icon {
+    position: relative;
+    background-image: url('./images/icon-view.svg');
+    background-size: cover;
+    
+    border-radius: 1rem;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--primaryCyan)
+  }
+
+  .over-lay-container {
+    position: relative;
+    border-radius: 10px;
+  }
+  .over-lay-container:hover .overlay {
+    opacity: 0.5;
+  }
+
+  .hover-icon{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  }
